@@ -19,6 +19,9 @@ export default defineNuxtConfig({
     baseURL: process.env.NODE_ENV =="production" ? "/CarPlatesWeb": "/",
     buildAssetsDir: "/nuxt/"
   },
+  router:{
+    base:process.env.NODE_ENV =="production" ? "/CarPlatesWeb/": "/"
+  },
   intlify: {
     localeDir: "locales", 
     vueI18n: {
