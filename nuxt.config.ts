@@ -16,7 +16,7 @@ export default defineNuxtConfig({
     viewer: true,
   },
   app: {
-    baseURL: "/CarPlatesWeb",
+    //baseURL: "/CarPlatesWeb",
   },
   intlify: {
     localeDir: "locales", 
@@ -25,4 +25,8 @@ export default defineNuxtConfig({
       // ...
     },
   },
+  router: {
+    base: '/CarPlatesWeb/'
+  },
+  target:"static"
 });
