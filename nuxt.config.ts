@@ -18,7 +18,7 @@ export default defineNuxtConfig({
   app: {
     baseURL: process.env.NODE_ENV =="production" ? "/CarPlatesWeb": "/",
     buildAssetsDir: "/nuxt/",
-    cdnURL:"https://ebolblga.github.io/CarPlatesWeb"
+    cdnURL:"/CarPlatesWeb"
   },
   router:{
     base:process.env.NODE_ENV =="production" ? "/CarPlatesWeb/": "/"

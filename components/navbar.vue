@@ -10,7 +10,7 @@ let isActive = ref(false);
         class="container flex flex-wrap justify-between items-center mx-auto"
       >
         <a href="/" class="flex items-center">
-          <nuxt-img src="/Logo.png" class="mr-3 h-6 sm:h-9" alt="Logo" />
+          <nuxt-img src="Logo.png" class="mr-3 h-6 sm:h-9" alt="Logo" />
         </a>
         <div class="flex md:order-2">
           <button
