@@ -11,7 +11,7 @@ import Navbar from "~/components/navbar.vue";
 
 <style>
 body {
-  background: linear-gradient(90deg, #080b12, #111827, #080b12);;
+  background: linear-gradient(90deg, #111827, #080b12, #111827);;
   color: #d6d6d6;
 }
 </style>
