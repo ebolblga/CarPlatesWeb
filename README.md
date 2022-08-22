@@ -1,42 +1,10 @@
-# Nuxt 3 Minimal Starter
-
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
-
-## Setup
-
-Make sure to install the dependencies:
+# Existing word car license plate generator
+## How to start project
 
 ```bash
-# yarn
-yarn install
+# first install all modules
+yarn
 
-# npm
-npm install
-
-# pnpm
-pnpm install --shamefully-hoist
+# now start project
+yarn dev
 ```
-
-## Development Server
-
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.
