@@ -4,7 +4,8 @@ import { defineNuxtConfig } from 'nuxt'
 export default defineNuxtConfig({
     modules: [
         "@nuxtjs/tailwindcss",
-        "@vueuse/nuxt"
+        "@vueuse/nuxt",
+        '@nuxt/image-edge'
     ],
     tailwindcss: {
         cssPath: '/assets/css/tailwind.css',
