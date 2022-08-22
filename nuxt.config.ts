@@ -16,7 +16,8 @@ export default defineNuxtConfig({
     viewer: true,
   },
   app: {
-    //baseURL: "/CarPlatesWeb",
+    baseURL: process.env.NODE_ENV =="production" ? "/CarPlatesWeb": "/",
+    buildAssetsDir: "/nuxt/"
   },
   intlify: {
     localeDir: "locales", 

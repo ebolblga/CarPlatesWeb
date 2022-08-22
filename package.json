@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": " nuxt dev",
     "generate": "nuxt generate && Xcopy \".output/public\" \"docs\"  /s /e /y /i",
     "preview": "nuxt preview"
   },
