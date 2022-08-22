@@ -4,7 +4,8 @@
     "build": "nuxt build",
     "dev": " nuxt dev",
     "generate": "nuxt generate && Xcopy \".output/public\" \"docs\"  /s /e /y /i",
-    "preview": "nuxt preview"
+    "preview": "nuxt preview",
+    "clean": "nuxi cleanup"
   },
   "devDependencies": {
     "@intlify/nuxt3": "^0.2.3",

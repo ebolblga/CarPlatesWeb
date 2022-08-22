@@ -17,12 +17,13 @@ export default defineNuxtConfig({
   },
   app: {
     baseURL: process.env.NODE_ENV =="production" ? "/CarPlatesWeb": "/",
-    buildAssetsDir: "/nuxt/"
+    buildAssetsDir: "/nuxt/",
+    cdnURL:"/CarPlatesWeb"
   },
   router:{
     base:process.env.NODE_ENV =="production" ? "/CarPlatesWeb/": "/"
   },
-  target:"static",
+  // target:"static",
   intlify: {
     localeDir: "locales", 
     vueI18n: {
