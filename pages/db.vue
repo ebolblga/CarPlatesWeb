@@ -1,10 +1,12 @@
 <script setup>
 useHead({ title: "База данных" })
-let {data} = useApi("/Library/ebeba.txt",{server:false})
+const {data,loading,error} = useGenOutput("ebeba.txt","6")
+
 
 </script>
 
 <template>
+  {{loading}} {{error}} {{data}} 
   <div>
     db.vue
   </div>
