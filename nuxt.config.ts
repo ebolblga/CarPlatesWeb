@@ -22,6 +22,7 @@ export default defineNuxtConfig({
   router:{
     base:process.env.NODE_ENV =="production" ? "/CarPlatesWeb/": "/"
   },
+  target:"static",
   intlify: {
     localeDir: "locales", 
     vueI18n: {
