@@ -4,8 +4,6 @@ useHead({ title: "Генератор" })
 
 <template>
   <div>
-    
-    test
     index.vue
   </div>
 </template>
