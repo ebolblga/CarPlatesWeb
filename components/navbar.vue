@@ -1,14 +1,20 @@
+<script setup>
+let isPressed = ref(true);
+let isActive = ref(false);
+</script>
+
 <template>
   <div>
     <nav class="bg-gray-900 px-2 sm:px-4 py-2.5">
       <div
-        class="container flex flex-wrap justify-start items-center mx-auto"
+        class="container flex flex-wrap justify-between items-center mx-auto"
       >
         <a href="/" class="flex items-center">
           <nuxt-img src="/Logo.png" class="mr-3 h-6 sm:h-9" alt="Logo" />
         </a>
         <div class="flex md:order-2">
           <button
+            @click="isPressed = !isPressed"
             data-collapse-toggle="navbar-cta"
             type="button"
             class="inline-flex items-center p-2 text-sm rounded-lg md:hidden focus:outline-none focus:ring-2 text-gray-400 hover:bg-gray-700 focus:ring-gray-600"
@@ -32,7 +38,8 @@
           </button>
         </div>
         <div
-          class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1"
+          class="justify-between items-center w-full md:flex md:w-auto md:order-1"
+          :class="{ hidden: isPressed }"
           id="navbar-cta"
         >
           <ul
@@ -42,7 +49,9 @@
               <NuxtLink
                 to="/"
                 title="Генератор регистрационных номеров авто"
-                class="block py-2 pr-4 pl-3 bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 text-white"
+                class="block py-2 pr-4 pl-3 md:p-0 md:hover:text-white text-gray-400 hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700"
+                :class="{ selected: !isActive }"
+                @click="isActive = false"
                 aria-current="page"
                 >Сгенерировать</NuxtLink
               >
@@ -51,7 +60,9 @@
               <NuxtLink
                 to="db"
                 title="База данных всех существующих слов"
-                class="block py-2 pr-4 pl-3 rounded md:p-0 md:hover:text-white text-gray-400 hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700"
+                class="block py-2 pr-4 pl-3 md:p-0 md:hover:text-white text-gray-400 hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700"
+                :class="{ selected: isActive }"
+                @click="isActive = true"
                 >База данных</NuxtLink
               >
             </li>
@@ -61,3 +72,13 @@
     </nav>
   </div>
 </template>
+
+<style>
+.selected {
+  --tw-bg-opacity: 1;
+  color: rgb(29 78 216 / var(--tw-text-opacity));
+}
+.selected:hover {
+  color: #5f6aff;
+}
+</style>
