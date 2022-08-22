@@ -3,14 +3,17 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
+    "generate": "nuxt generate && Xcopy \".output/public\" \"docs\"  /s /e /y /i",
     "preview": "nuxt preview"
   },
   "devDependencies": {
+    "@intlify/nuxt3": "^0.2.3",
+    "@intlify/vite-plugin-vue-i18n": "^6.0.1",
     "@nuxt/image-edge": "^1.0.0-27657146.da85542",
     "@nuxtjs/tailwindcss": "^5.3.2",
     "@vueuse/core": "^9.1.0",
     "@vueuse/nuxt": "^9.1.0",
-    "nuxt": "3.0.0-rc.8"
+    "nuxt": "3.0.0-rc.8",
+    "sass": "^1.54.5"
   }
 }

@@ -39,20 +39,20 @@
             class="flex flex-col p-4 mt-4 rounded-lg border md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 bg-gray-800 md:bg-gray-900 border-gray-700"
           >
             <li>
-              <a
-                href="/"
+              <NuxtLink
+                to="/"
                 title="Генератор регистрационных номеров авто"
                 class="block py-2 pr-4 pl-3 bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 text-white"
                 aria-current="page"
-                >Сгенерировать</a
+                >Сгенерировать</NuxtLink
               >
             </li>
             <li>
-              <a
-                href="db"
+              <NuxtLink
+                to="db"
                 title="База данных всех существующих слов"
                 class="block py-2 pr-4 pl-3 rounded md:p-0 md:hover:text-white text-gray-400 hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700"
-                >База данных</a
+                >База данных</NuxtLink
               >
             </li>
           </ul>
