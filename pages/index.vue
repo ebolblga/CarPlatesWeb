@@ -4,7 +4,7 @@ const files = {
   "russianUTF-8.txt": "Все русские слова",
   "ebeba.txt": "Смешные слова",
   "swears.txt": "Бранные слова",
-  "": "Свой файл",
+  "": "Свой файл"
 };
 const file = ref("russianUTF-8.txt");
 const types = {
