@@ -1,59 +1,92 @@
 <script setup>
 useHead({ title: "Генератор" });
 const files = {
-  "russianUTF-8.txt": "все русские слова",
-  "ebeba.txt": "смешные слова",
-  "swear.txt": "бранные слова",
-  "": "свой файл"
-}
-const file = ref("russianUTF-8.txt")
+  "russianUTF-8.txt": "Все русские слова",
+  "ebeba.txt": "Смешные слова",
+  "swears.txt": "Бранные слова",
+  "": "Свой файл",
+};
+const file = ref("russianUTF-8.txt");
 const types = {
-  "": "все буквы",
-  "3": "3 буквенные",
-  "6": "6 буквенные"
-}
-const type = ref("")
+  3: "Только серия (3 буквы)",
+  6: "Серия + номер (6 букв)",
+  "": "С пробелами",
+};
+const type = ref("6");
 const request = ref({
   data: [],
   loading: false,
-  error: false
-})
+  error: false,
+});
 function Search() {
   if (file.value == "") {
-    const input = document.createElement("input")
-    input.type = "file"
-    input.accept = ".txt"
-    input.click()
-    input.onchange = e => {
-      const file = input.files[0]
-      request.value = useGenOutputFile(file, type.value)
-    }
+    const input = document.createElement("input");
+    input.type = "file";
+    input.accept = ".txt";
+    input.click();
+    input.onchange = (e) => {
+      const file = input.files[0];
+      request.value = useGenOutputFile(file, type.value);
+    };
   } else {
     request.value = useGenOutput(file.value, type.value);
   }
-
 }
 </script>
 
 <template>
-  <div class="content-center text-center pt-[10%]">
+  <div class="content-center text-center pt-[5vh]">
     <!-- <DropdownRadio /> -->
-    <select v-model="file">
-      <option v-for="file, i in files" :value="i">{{ file }}</option>
-    </select><br />
-    <select v-model="type">
-      <option v-for="type, i in types" :value="i">{{ type }}</option>
+    <select
+      v-model="file"
+      class="min-w-[220px] h-[40px] mb-5 text-center focus:outline-none rounded-lg border focus:z-10 focus:ring-4 focus:ring-gray-700 bg-gray-800 text-gray-400 border-gray-600 hover:text-white hover:bg-gray-700"
+    >
+      <option v-for="(file, i) in files" :value="i">{{ file }}</option></select
+    ><br />
+    <select
+      v-model="type"
+      class="min-w-[220px] h-[40px] mb-5 text-center focus:outline-none rounded-lg border focus:z-10 focus:ring-4 focus:ring-gray-700 bg-gray-800 text-gray-400 border-gray-600 hover:text-white hover:bg-gray-700"
+    >
+      <option v-for="(type, i) in types" :value="i">{{ type }}</option>
     </select>
     <br />
-    <button type="button" @click="Search"
-      class="py-2.5 px-5 mr-2 mb-2 text-sm font-medium focus:outline-none rounded-lg border focus:z-10 focus:ring-4 focus:ring-gray-700 bg-gray-800 text-gray-400 border-gray-600 hover:text-white hover:bg-gray-700">
-      Поиск
-    </button><br />
-    <span v-if="request.loading">
-      загрузка...
+    <button
+      type="button"
+      @click="Search"
+      class="h-[40px] px-5 mr-2 mb-2 focus:outline-none rounded-lg border focus:z-10 focus:ring-4 focus:ring-gray-700 bg-gray-800 text-gray-400 border-gray-600 hover:text-white hover:bg-gray-700"
+    >
+      Поиск</button
+    ><br />
+    <span v-if="request.loading" class="text-green-300 pt-5">
+      Загрузка...
     </span>
     <span v-else>
-      {{ request.error }} {{ request.data }}
+      <div class="text-green-300" :class="{ 'text-red-300': request.error }">
+        Успешный запрос: {{ !request.error }}
+      </div>
+      <br />
+      <div class="mx-[37.5vw] overflow-x-hidden relative shadow-md sm:rounded-lg">
+        <table class="w-[25vw] text-gray-400">
+          <thead class="text-xm bg-gray-700 text-gray-400">
+            <tr>
+              <th class="py-3 px-6">№</th>
+              <th class="py-3 px-6">Слово</th>
+            </tr>
+          </thead>
+          <tbody v-for="(word, i) in request.data">
+            <tr class="border-b border-gray-700" :class="{ 'bg-gray-800': i % 2, 'bg-gray-900': (i + 1) % 2}">
+              <td class="py-4 px-6">{{ i + 1 }}</td>
+              <td class="py-4 px-6">{{ word }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </span>
   </div>
 </template>
+
+<style>
+.entry {
+  flex: 1 0 25%;
+}
+</style>
