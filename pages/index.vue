@@ -1,3 +1,9 @@
+<script setup>
+useHead({ title: "Генератор" })
+</script>
+
 <template>
-    This is CarPlatesWeb project!
+  <div>
+    index.vue
+  </div>
 </template>
