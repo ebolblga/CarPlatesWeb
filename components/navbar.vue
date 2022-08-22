@@ -2,7 +2,7 @@
   <div>
     <nav class="bg-gray-900 px-2 sm:px-4 py-2.5">
       <div
-        class="container flex flex-wrap justify-between items-center mx-auto"
+        class="container flex flex-wrap justify-start items-center mx-auto"
       >
         <a href="/" class="flex items-center">
           <nuxt-img src="/Logo.png" class="mr-3 h-6 sm:h-9" alt="Logo" />
@@ -20,7 +20,7 @@
               class="w-6 h-6"
               aria-hidden="true"
               fill="currentColor"
-              viewBox="0 0 20 20"
+              viewbox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
