@@ -28,5 +28,5 @@ export default defineNuxtConfig({
   // router: {
   //   base: '/CarPlatesWeb/'
   // },
-  target:"static"
+  //target:"static"
 });
