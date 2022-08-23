@@ -49,7 +49,7 @@ function Search() {
       <option v-for="(type, i) in types" :value="i">{{ type }}</option>
     </select>
     <br />
-    <my-button @click="Search" :class="{'border-red-500 focus:ring-red-400' : request.error}">Поиск</my-button>
+    <my-button @click="Search" :class="{'border-red-500 focus:ring-red-400 shake' : request.error}">Поиск</my-button>
     <br />
     <span v-if="request.loading" class="text-green-300 pt-5">
       Загрузка...
