@@ -34,7 +34,7 @@ async function Load() {
     <span v-if="!words.length" class="text-green-300 pt-5">
       Не загружено
     </span>
-    <span v-else>
+    <span v-else class="text-gray-600 text-xl">
       Всего записей: {{words.length}}
     </span>
   </div>

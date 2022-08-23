@@ -53,6 +53,7 @@ function Search() {
       type="button"
       @click="Search"
       class="h-[40px] px-5 mb-2 focus:outline-none rounded-lg border focus:z-10 focus:ring-4 focus:ring-gray-700 bg-gray-800 text-gray-400 border-gray-600 hover:text-white hover:bg-gray-700"
+      :class="{'border-red-300' : request.error}"
     >
       Поиск</button
     ><br />
@@ -60,23 +61,23 @@ function Search() {
       Загрузка...
     </span>
     <span v-else>
-      <div class="text-green-300" :class="{ 'text-red-300': request.error }">
-        Успешный запрос: {{ !request.error }}
-      </div>
-      <br />
-      Всего подошло: {{request.data.length}}
-      <div class="mx-[32vw] sm:mx-[37.5vw] overflow-x-hidden relative shadow-md rounded-lg">
-        <table class="w-[36vw] sm:w-[25vw] text-gray-400">
+      <span v-if="request.data.length > 0" class="text-gray-600 text-xl">Всего найдено: {{request.data.length}}</span>
+      <div v-if="request.data.length > 0" class="mx-[10vw] sm:mx-[25vw] overflow-x-hidden relative shadow-md rounded-lg">
+        <table class="w-[80vw] sm:w-[50vw] text-gray-400">
           <thead class="text-xm bg-gray-700 text-gray-400">
             <tr>
               <th class="py-3 px-auto">№</th>
               <th class="py-3 px-auto">Слово</th>
+              <th class="py-3 px-auto">Номер</th>
+              <th class="py-3 px-auto">Изображение</th>
             </tr>
           </thead>
           <tbody v-for="(word, i) in request.data">
             <tr class="border-b border-gray-700" :class="{ 'bg-gray-800': i % 2, 'bg-gray-900': (i + 1) % 2}">
               <td class="py-4 px-auto">{{ i + 1 }}</td>
               <td class="py-4 px-auto">{{ word }}</td>
+              <td class="py-4 px-auto"></td>
+              <td class="py-4 px-auto"></td>
             </tr>
           </tbody>
         </table>
