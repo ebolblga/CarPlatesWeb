@@ -37,6 +37,7 @@ export default defineNuxtConfig({
   // },
   //target:"static"
   content: {
+    base: '/CarPlateWeb/content',
     highlight: {
       theme: 'github-dark'
     }

@@ -3,6 +3,9 @@ import Navbar from "~/components/navbar.vue";
 </script>
 
 <template>
+  <head>
+    <link rel="icon" href="/favicon.ico"/>
+  </head>
   <div class="h-screen">
     <Navbar />
     <slot />
