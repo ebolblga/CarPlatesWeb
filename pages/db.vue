@@ -1,15 +1,19 @@
-<script setup>
-useHead({ title: "База данных" })
+<script setup lang="ts">
+useHead({ title: "База данных" });
 const files = {
   "russianUTF-8.txt": "Все русские слова",
-  "ebeba.txt": "Смешные слова",
   "swears.txt": "Бранные слова",
+  "ebeba.txt": "Смешные слова",
 };
 const file = ref("russianUTF-8.txt");
 
-function Load() {
-    request.value = useGenOutput(file.value, type.value);
-};
+let words = ref([]);
+async function Load() {
+  const data: string = await $fetch("/Library/" + file.value );
+  words.value = data
+    .split("\n")
+    .map((word) => (word.at(-1) == "\r" ? word.slice(0, -1) : word));
+}
 </script>
 
 <template>
@@ -20,12 +24,13 @@ function Load() {
     >
       <option v-for="(file, i) in files" :value="i">{{ file }}</option></select
     ><br />
-        <button
+    <button
       type="button"
       @click="Load"
       class="h-[40px] px-5 mr-2 mb-2 focus:outline-none rounded-lg border focus:z-10 focus:ring-4 focus:ring-gray-700 bg-gray-800 text-gray-400 border-gray-600 hover:text-white hover:bg-gray-700"
     >
       Загрузить</button
     ><br />
+    Всего записей: {{words.length}}
   </div>
 </template>

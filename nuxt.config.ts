@@ -6,7 +6,8 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@vueuse/nuxt",
     "@nuxt/image-edge",
-    "@intlify/nuxt3",
+    // "@intlify/nuxt3",
+    '@nuxt/content'
   ],
   tailwindcss: {
     cssPath: "/assets/css/tailwind.css",
@@ -35,4 +36,9 @@ export default defineNuxtConfig({
   //   base: '/CarPlatesWeb/'
   // },
   //target:"static"
+  content: {
+    highlight: {
+      theme: 'github-dark'
+    }
+  },
 });

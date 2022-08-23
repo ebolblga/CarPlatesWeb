@@ -1,6 +1,6 @@
 <script setup>
 let isPressed = ref(true);
-let isActive = ref(false);
+let isActive = ref();
 </script>
 
 <template>
@@ -50,8 +50,8 @@ let isActive = ref(false);
                 to="/"
                 title="Генератор регистрационных номеров авто"
                 class="block py-2 pr-4 pl-3 md:p-0 md:hover:text-white text-gray-400 hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700"
-                :class="{ selected: !isActive }"
-                @click="isActive = false"
+                :class="{ selected: (isActive==0) }"
+                @click="isActive = 0"
                 aria-current="page"
                 >Сгенерировать</NuxtLink
               >
@@ -61,9 +61,20 @@ let isActive = ref(false);
                 to="db"
                 title="База данных всех существующих слов"
                 class="block py-2 pr-4 pl-3 md:p-0 md:hover:text-white text-gray-400 hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700"
-                :class="{ selected: isActive }"
-                @click="isActive = true"
+                :class="{ selected: (isActive==1) }"
+                @click="isActive = 1"
                 >База данных</NuxtLink
+              >
+            </li>
+             <li>
+              <NuxtLink
+                to="about"
+                title="Подробная документация проекта"
+                class="block py-2 pr-4 pl-3 md:p-0 md:hover:text-white text-gray-400 hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700"
+                :class="{ selected: (isActive==2) }"
+                @click="isActive = 2"
+                aria-current="page"
+                >О проекте</NuxtLink
               >
             </li>
           </ul>
