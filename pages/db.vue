@@ -31,6 +31,11 @@ async function Load() {
     >
       Загрузить</button
     ><br />
-    Всего записей: {{words.length}}
+    <span v-if="!words.length" class="text-green-300 pt-5">
+      Не загружено
+    </span>
+    <span v-else>
+      Всего записей: {{words.length}}
+    </span>
   </div>
 </template>

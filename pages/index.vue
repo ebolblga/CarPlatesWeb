@@ -64,7 +64,7 @@ function Search() {
         Успешный запрос: {{ !request.error }}
       </div>
       <br />
-      Всего записей: {{request.data.length}}
+      Всего подошло: {{request.data.length}}
       <div class="mx-[32vw] sm:mx-[37.5vw] overflow-x-hidden relative shadow-md rounded-lg">
         <table class="w-[36vw] sm:w-[25vw] text-gray-400">
           <thead class="text-xm bg-gray-700 text-gray-400">
