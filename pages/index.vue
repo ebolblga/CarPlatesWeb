@@ -49,14 +49,8 @@ function Search() {
       <option v-for="(type, i) in types" :value="i">{{ type }}</option>
     </select>
     <br />
-    <button
-      type="button"
-      @click="Search"
-      class="h-[40px] px-5 mb-2 focus:outline-none rounded-lg border focus:z-10 focus:ring-4 focus:ring-gray-700 bg-gray-800 text-gray-400 border-gray-600 hover:text-white hover:bg-gray-700"
-      :class="{'border-red-300' : request.error}"
-    >
-      Поиск</button
-    ><br />
+    <my-button @click="Search" :class="{'border-red-500 focus:ring-red-400' : request.error}">Поиск</my-button>
+    <br />
     <span v-if="request.loading" class="text-green-300 pt-5">
       Загрузка...
     </span>

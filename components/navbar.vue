@@ -9,9 +9,9 @@ let isActive = ref(0);
       <div
         class="container flex flex-wrap justify-between items-center mx-auto"
       >
-        <a href="/" class="flex items-center">
+        <NuxtLink to="/" @click="isActive = 0" class="flex items-center">
           <nuxt-img src="/Logo.png" class="mr-3 h-6 sm:h-9" alt="Logo" />
-        </a>
+        </NuxtLink>
         <div class="flex md:order-2">
           <button
             @click="isPressed = !isPressed"
@@ -75,6 +75,16 @@ let isActive = ref(0);
                 @click="isActive = 2"
                 aria-current="page"
                 >О проекте</NuxtLink
+              >
+            </li>
+            <li>
+              <NuxtLink
+                to="/test"
+                title="Страничка для тестирования"
+                class="block py-2 pr-4 pl-3 md:p-0 md:hover:text-white text-gray-400 hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700"
+                :class="{ selected: (isActive==3) }"
+                @click="isActive = 3"
+                >Тестирование</NuxtLink
               >
             </li>
           </ul>
