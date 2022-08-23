@@ -10,7 +10,7 @@ let isActive = ref();
         class="container flex flex-wrap justify-between items-center mx-auto"
       >
         <a href="/" class="flex items-center">
-          <nuxt-img src="Logo.png" class="mr-3 h-6 sm:h-9" alt="Logo" />
+          <nuxt-img src="/Logo.png" class="mr-3 h-6 sm:h-9" alt="Logo" />
         </a>
         <div class="flex md:order-2">
           <button
@@ -58,7 +58,7 @@ let isActive = ref();
             </li>
             <li>
               <NuxtLink
-                to="db"
+                to="/db"
                 title="База данных всех существующих слов"
                 class="block py-2 pr-4 pl-3 md:p-0 md:hover:text-white text-gray-400 hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700"
                 :class="{ selected: (isActive==1) }"
@@ -68,7 +68,7 @@ let isActive = ref();
             </li>
              <li>
               <NuxtLink
-                to="about"
+                to="/about"
                 title="Подробная документация проекта"
                 class="block py-2 pr-4 pl-3 md:p-0 md:hover:text-white text-gray-400 hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700"
                 :class="{ selected: (isActive==2) }"
