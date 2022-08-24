@@ -113,7 +113,7 @@ function Search() {
       Загрузка...
     </span>
     <span v-else>
-      <span v-if="request.data.length > 0" class="text-gray-600 text-xl">Всего найдено: {{ request.data.length }}</span>
+      <span class="text-gray-600 text-xl">Всего найдено: {{ request.data.length }}</span>
       <div v-if="request.data.length > 0"
         class="mx-[10vw] sm:mx-[25vw] overflow-x-hidden relative shadow-md rounded-lg">
         <table class="w-[80vw] sm:w-[50vw] text-gray-400">
