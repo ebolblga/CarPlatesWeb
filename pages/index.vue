@@ -1,4 +1,7 @@
-<script setup>
+<script setup lang="ts">
+import { Type } from '~~/composables/useGenOutput';
+
+
 useHead({ title: "Генератор" });
 const files = {
   "russianUTF-8.txt": "Все русские слова",
@@ -8,16 +11,72 @@ const files = {
 };
 const file = ref("russianUTF-8.txt");
 const types = {
-  6: "Серия + номер (6 букв)",
-  3: "Только серия (3 буквы)",
+  "6": "Серия + номер (6 букв)",
+  "3": "Только серия (3 буквы)",
   "": "С пробелами"
 };
-const type = ref(6);
+const canvas = document.createElement("canvas")
+  canvas.width = 156
+  canvas.height = 36
+onBeforeMount(async ()=>{
+  var myFont = new FontFace('RoadNumbers', 'url(/RoadNumbers2.0.ttf)');
+  const font = await myFont.load()
+  document.fonts.add(font)
+})
+async function drawPlate(text="B639YH") {
+  const ctx = canvas.getContext("2d");
+  const img = new Image()
+  img.src = "/TemplateRU.png";
+  await new Promise(resolve=>{
+    img.onload = ()=> resolve(1)
+  })
+  ctx.drawImage(img,0,0)
+  ctx.font = "32px RoadNumbers";
+  ctx.fillText("B639YH", 2, 16);
+}
+const type = ref<Type>("6");
 const request = ref({
   data: [],
   loading: false,
   error: false,
 });
+const toPlate = (word: string) => {
+  const Map = {
+    а: "A",
+    в: "B",
+    е: "E",
+    к: "K",
+    м: "M",
+    н: "H",
+    о: "O",
+    р: "P",
+    с: "C",
+    т: "T",
+    х: "X",
+    у: "Y",
+  }
+  const digitMap = {
+    о: 0,
+    з: 3,
+    ч: 4,
+    б: 6,
+    д: 9
+  }
+  const toEng = word =>word.replace(/[авекмнорстух]/ig, letter => Map[letter])
+  const toDigit = word => word.replace(/[озчбд]/ig, letter => digitMap[letter])
+  const [_,a,b,c]= /(.)(...)(..)/.exec(word.toLowerCase())
+  return toEng(a) + toDigit(b) + toEng(c)
+}
+const plates = computed(() => {
+  return request.value.data.map(plate => {
+    if (plate.length == 3) {
+      const [_, a, b] = /(.)(..)/.exec(plate)
+      plate = `${a}***${b}`
+    }
+    return toPlate(plate)
+  });
+})
+
 function Search() {
   if (file.value == "") {
     const input = document.createElement("input");
@@ -36,27 +95,24 @@ function Search() {
 
 <template>
   <div class="content-center text-center pt-[5vh]">
-    <select
-      v-model="file"
-      class="min-w-[220px] h-[40px] mb-5 text-center focus:outline-none rounded-lg border focus:z-10 focus:ring-4 focus:ring-gray-700 bg-gray-800 text-gray-400 border-gray-600 hover:text-white hover:bg-gray-700"
-    >
-      <option v-for="(file, i) in files" :value="i">{{ file }}</option></select
-    ><br />
-    <select
-      v-model="type"
-      class="min-w-[220px] h-[40px] mb-5 text-center focus:outline-none rounded-lg border focus:z-10 focus:ring-4 focus:ring-gray-700 bg-gray-800 text-gray-400 border-gray-600 hover:text-white hover:bg-gray-700"
-    >
-      <option v-for="(type, i) in types" :value="i">{{ type }}</option>
+    <select v-model="file"
+      class="min-w-[220px] h-[40px] mb-5 text-center focus:outline-none rounded-lg border focus:z-10 focus:ring-4 focus:ring-gray-700 bg-gray-800 text-gray-400 border-gray-600 hover:text-white hover:bg-gray-700">
+      <option v-for="(file, i) in files" :value="i">{{ file }}</option>
+    </select><br />
+    <select :value="type" v-model="type"
+      class="min-w-[220px] h-[40px] mb-5 text-center focus:outline-none rounded-lg border focus:z-10 focus:ring-4 focus:ring-gray-700 bg-gray-800 text-gray-400 border-gray-600 hover:text-white hover:bg-gray-700">
+      <option v-for="(type, i) in types" :value="i" >{{ type }}</option>
     </select>
     <br />
-    <my-button @click="Search" :class="{'border-red-500 focus:ring-red-400 shake' : request.error}">Поиск</my-button>
+    <my-button @click="Search" :class="{ 'border-red-500 focus:ring-red-400 shake': request.error }">Поиск</my-button>
     <br />
     <span v-if="request.loading" class="text-green-300 pt-5">
       Загрузка...
     </span>
     <span v-else>
-      <span v-if="request.data.length > 0" class="text-gray-600 text-xl">Всего найдено: {{request.data.length}}</span>
-      <div v-if="request.data.length > 0" class="mx-[10vw] sm:mx-[25vw] overflow-x-hidden relative shadow-md rounded-lg">
+      <span v-if="request.data.length > 0" class="text-gray-600 text-xl">Всего найдено: {{ request.data.length }}</span>
+      <div v-if="request.data.length > 0"
+        class="mx-[10vw] sm:mx-[25vw] overflow-x-hidden relative shadow-md rounded-lg">
         <table class="w-[80vw] sm:w-[50vw] text-gray-400">
           <thead class="text-xm bg-gray-700 text-gray-400">
             <tr>
@@ -67,10 +123,10 @@ function Search() {
             </tr>
           </thead>
           <tbody v-for="(word, i) in request.data">
-            <tr class="border-b border-gray-700" :class="{ 'bg-gray-800': i % 2, 'bg-gray-900': (i + 1) % 2}">
+            <tr class="border-b border-gray-700" :class="{ 'bg-gray-800': i % 2, 'bg-gray-900': (i + 1) % 2 }">
               <td class="py-4 px-auto">{{ i + 1 }}</td>
               <td class="py-4 px-auto">{{ word }}</td>
-              <td class="py-4 px-auto"></td>
+              <td class="py-4 px-auto">{{ plates[i] }}</td>
               <td class="py-4 px-auto"></td>
             </tr>
           </tbody>
