@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { toDataURL } from 'mlly';
 import { Type } from '~~/composables/useGenOutput';
 
 
@@ -15,25 +16,27 @@ const types = {
   "3": "Только серия (3 буквы)",
   "": "С пробелами"
 };
-const canvas = document.createElement("canvas")
-  canvas.width = 156
-  canvas.height = 36
-onBeforeMount(async ()=>{
+let canvas,ctx,img;
+
+onMounted(async ()=>{
   var myFont = new FontFace('RoadNumbers', 'url(/RoadNumbers2.0.ttf)');
   const font = await myFont.load()
   document.fonts.add(font)
-})
-async function drawPlate(text="B639YH") {
-  const ctx = canvas.getContext("2d");
-  const img = new Image()
+  canvas = document.createElement("canvas")
+  Object.assign(canvas,{width:156,height:36})
+  ctx = canvas.getContext("2d");
+  img = new Image()
   img.src = "/TemplateRU.png";
-  await new Promise(resolve=>{
-    img.onload = ()=> resolve(1)
-  })
+})
+function drawPlate(text="B639YH",region=64) {
   ctx.drawImage(img,0,0)
-  ctx.font = "32px RoadNumbers";
-  ctx.fillText("B639YH", 2, 16);
+  ctx.font = "38px RoadNumbers";
+  ctx.fillText(text, 11, 30);
+  ctx.font = "24px RoadNumbers";
+  ctx.fillText(region, 120, 20);
+  return canvas.toDataURL();
 }
+
 const type = ref<Type>("6");
 const request = ref({
   data: [],
@@ -76,7 +79,7 @@ const plates = computed(() => {
     return toPlate(plate)
   });
 })
-
+const platesUrls = computed(()=>plates.value.map(plate=>drawPlate(plate)))
 function Search() {
   if (file.value == "") {
     const input = document.createElement("input");
@@ -127,7 +130,7 @@ function Search() {
               <td class="py-4 px-auto">{{ i + 1 }}</td>
               <td class="py-4 px-auto">{{ word }}</td>
               <td class="py-4 px-auto">{{ plates[i] }}</td>
-              <td class="py-4 px-auto"></td>
+              <td class="py-4 px-auto"><img :src="platesUrls[i]" :alt="plates[i]"></td>
             </tr>
           </tbody>
         </table>
