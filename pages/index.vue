@@ -28,12 +28,12 @@ onMounted(async ()=>{
   img = new Image()
   img.src = "/TemplateRU.png";
 })
-function drawPlate(text="B639YH",region=64) {
+function drawPlate(text="A000AA",region=177) {
   ctx.drawImage(img,0,0)
   ctx.font = "38px RoadNumbers";
   ctx.fillText(text, 11, 30);
-  ctx.font = "24px RoadNumbers";
-  ctx.fillText(region, 120, 20);
+  ctx.font = "25px RoadNumbers";
+  ctx.fillText(region, 120, 21);
   return canvas.toDataURL();
 }
 
@@ -130,7 +130,7 @@ function Search() {
               <td class="py-4 px-auto">{{ i + 1 }}</td>
               <td class="py-4 px-auto">{{ word }}</td>
               <td class="py-4 px-auto">{{ plates[i] }}</td>
-              <td class="py-4 px-auto"><img :src="platesUrls[i]" :alt="plates[i]"></td>
+              <td class="py-4 px-auto"><a class="flex justify-center" href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><img :src="platesUrls[i]" :alt="plates[i]"/></a></td>
             </tr>
           </tbody>
         </table>
