@@ -67,7 +67,7 @@ async function Gen6LetterOutputFile(file: File) {
   const data: string = await file.text();
   return Gen6LetterOutput(data);
 }
-type Type = "" | "6" | "3";
+export type Type = "" | "6" | "3";
 
 export function useGenOutputFile(
   file: File,

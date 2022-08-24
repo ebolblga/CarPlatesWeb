@@ -4,7 +4,7 @@ import Navbar from "~/components/navbar.vue";
 
 <template>
   <head>
-    <link rel="icon" href="/favicon.ico"/>
+    <link rel="icon" href="https://ebolblga.github.io/CarPlatesWeb/favicon.ico"/>
   </head>
   <div class="h-screen">
     <Navbar />
