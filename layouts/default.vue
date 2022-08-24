@@ -17,4 +17,8 @@ body {
   background: linear-gradient(90deg, #111827, #080b12, #111827);;
   color: #d6d6d6;
 }
+@font-face {
+  font-family: 'RoadNumbers'; /*a name to be used later*/
+  src: url('/RoadNumbers2.0.ttf'); /*URL to font*/
+}
 </style>

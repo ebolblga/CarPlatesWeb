@@ -1,4 +1,3 @@
-import { type } from "os";
 
 async function GenLetterOutput(data = "") {
   let words = data
