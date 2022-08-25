@@ -94,6 +94,7 @@ function Search() {
     request.value = useGenOutput(file.value, type.value);
   }
 }
+let popupShown = ref(false);
 </script>
 
 <template>
@@ -108,6 +109,21 @@ function Search() {
     </select>
     <br />
     <my-button @click="Search" :class="{ 'border-red-500 focus:ring-red-400 shake': request.error }">Поиск</my-button>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100" rel="stylesheet" />
+    <span class="material-symbols-outlined icon w-0" @click="popupShown=!popupShown">help</span>
+    
+    <div class="inline-block absolute z-10 w-64 ml-8 mt-[-40px] text-sm font-light rounded-lg border shadow-sm text-gray-400 border-gray-600 bg-gray-800" :class="{'hidden': !popupShown}">
+    <div class="py-2 px-3 rounded-t-lg border-b border-gray-600 bg-gray-700">
+        <h3 class="font-semibold text-white">Поиск слов на номерах машин</h3>
+    </div>
+    <div class="py-2 px-3">
+        <p>1. Выберете базу данных для поиска</p>
+        <p>2. Выберете метод совпадения</p>
+        <p>3. Нажмите кнопку "Поиск"</p>
+    </div>
+     <div data-popper-arrow></div>
+    </div>
+
     <br />
     <span v-if="request.loading" class="text-green-300 pt-5">
       Загрузка...
@@ -142,5 +158,9 @@ function Search() {
 <style>
 .entry {
   flex: 1 0 25%;
+}
+
+.icon {
+  color: rgb(156 163 175);
 }
 </style>
