@@ -25,10 +25,12 @@ onMounted(async ()=>{
   canvas = document.createElement("canvas")
   Object.assign(canvas,{width:156,height:36})
   ctx = canvas.getContext("2d");
+  console.log(1,ctx)
   img = new Image()
   img.src = "/TemplateRU.png";
 })
 function drawPlate(text="A000AA",region=177) {
+  console.log(2,ctx)
   ctx.drawImage(img,0,0)
   ctx.font = "38px RoadNumbers";
   ctx.fillText(text, 11, 30);
