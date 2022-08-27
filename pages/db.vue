@@ -30,7 +30,7 @@ async function Load() {
     .split("\n")
     .map((word) => (word.at(-1) == "\r" ? word.slice(0, -1) : word));
 }
-
+Load()
 async function Download() {
   const a = document.createElement("a");
   a.download = file.value;
@@ -41,15 +41,12 @@ async function Download() {
 
 <template>
   <div class="content-center text-center pt-[5vh]">
-    <select v-model="file"
+    <select v-model="file" @change="Load"
       class="min-w-[220px] h-[40px] mb-5 text-center focus:outline-none rounded-lg border focus:z-10 focus:ring-4 focus:ring-gray-700 bg-gray-800 text-gray-400 border-gray-600 hover:text-white hover:bg-gray-700">
       <option v-for="(file, i) in files" :value="i">{{ file }}</option>
     </select>
-    <br />
-    <my-button @click="Load">Загрузить</my-button>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100" rel="stylesheet"/>
     <span class="material-symbols-outlined icon w-0 cursor-help select-none" @click="popupShown=!popupShown">help</span>
-    
     <div class="inline-block absolute z-10 w-86 ml-8 mt-[-40px] text-sm font-light rounded-lg border shadow-sm text-gray-400 border-gray-600 bg-gray-800" :class="{'hidden': !popupShown}">
     <div class="py-2 px-3 rounded-t-lg border-b border-gray-600 bg-gray-700">
         <h3 class="font-semibold text-white">Источники данных</h3>
@@ -64,6 +61,7 @@ async function Download() {
      <div data-popper-arrow></div>
     </div>
     <br />
+    <!-- <my-button @click="Load">Загрузить</my-button> -->
     <my-button @click="Download">Скачать</my-button>
     <br />
     <span v-if="!words.length" class="text-green-300 pt-5"> Не загружено </span>
