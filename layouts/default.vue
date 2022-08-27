@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import Navbar from "~/components/navbar.vue";
+const {public:{base}} = useRuntimeConfig()
 useHead({
   link:[{
     rel:"icon",
-    href:"/favicon.ico",
+    href:`${base}favicon.ico`,
     type:"image/x-icon"
   }]
 })
