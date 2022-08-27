@@ -14,6 +14,9 @@ useHead({
   <div class="h-screen">
     <Navbar />
     <slot />
+    <a href="https://github.com/ebolblga/CarPlatesWeb" class="fixed right-3 bottom-0 text-xs text-gray-500 select-none">
+      ahibis & ebolblga © 2022
+    </a>
   </div>
 </template>
 
@@ -23,7 +26,7 @@ body {
   color: #d6d6d6;
 }
 @font-face {
-  font-family: 'RoadNumbers'; /*a name to be used later*/
-  src: url('/RoadNumbers2.0.ttf'); /*URL to font*/
+  font-family: 'RoadNumbers';
+  src: url('/RoadNumbers2.0.ttf');
 }
 </style>

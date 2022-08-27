@@ -127,16 +127,17 @@ let popupShown = ref(false);
     </div>
      <div data-popper-arrow></div>
     </div>
-
     <br />
     <span v-if="request.loading" class="text-green-300 pt-5">
       Загрузка...
     </span>
     <span v-else>
       <span class="text-gray-600 text-xl">Всего найдено: {{ request.data.length }}</span>
+      <br />
+      <br />
       <div v-if="request.data.length > 0"
-        class="mx-[10vw] sm:mx-[25vw] overflow-x-hidden relative shadow-md rounded-lg">
-        <table class="w-[80vw] sm:w-[50vw] text-gray-400">
+        class="mx-[10vw] sm:mx-[25vw] overflow-x-hidden relative rounded-lg">
+        <table class="w-[86vw] sm:w-[50vw] text-gray-400">
           <thead class="text-xm bg-gray-700 text-gray-400">
             <tr>
               <th class="py-3 px-auto">№</th>
@@ -166,5 +167,12 @@ let popupShown = ref(false);
 
 .icon {
   color: rgb(156 163 175);
+}
+
+br {
+    -webkit-user-select: none;      
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 </style>
