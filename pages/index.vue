@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { toDataURL } from 'mlly';
 import { Type } from '~~/composables/useGenOutput';
-
+import { onMounted } from '#imports'
 
 useHead({ title: "Генератор" });
 const files = {
