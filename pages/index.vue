@@ -169,8 +169,7 @@ let popupShown = ref(false);
   color: rgb(156 163 175);
 }
 
-br
-{
+br {
     -webkit-user-select: none;      
     -moz-user-select: none;
     -ms-user-select: none;
