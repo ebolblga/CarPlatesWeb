@@ -16,24 +16,18 @@ const types = {
   "": "С пробелами"
 };
 let canvas,ctx,img;
+const {public:{base}} = useRuntimeConfig()
 
 onMounted(async ()=>{
-
-  try{
-    const myFont = new FontFace('RoadNumbers', 'url(/RoadNumbers2.0.ttf)');
-    const font = await myFont.load()
-    document.fonts.add(font)
-  }catch(e){
-    const myFont = new FontFace('RoadNumbers', 'url(/CarPlatesWeb/RoadNumbers2.0.ttf)');
-    const font = await myFont.load()
-    document.fonts.add(font)
-  }
+  const myFont = new FontFace('RoadNumbers', `url(${base}RoadNumbers2.0.ttf)`);
+  const font = await myFont.load()
+  document.fonts.add(font)
   canvas = document.createElement("canvas")
   Object.assign(canvas,{width:156,height:36})
   ctx = canvas.getContext("2d");
   console.log(1,ctx)
   img = new Image()
-  img.src = "/TemplateRU.png";
+  img.src = `${base}TemplateRU.png`;
 })
 function drawPlate(text="A000AA",region=177) {
   console.log(2,ctx)

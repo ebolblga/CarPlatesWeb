@@ -9,6 +9,9 @@ export default defineNuxtConfig({
     // "@intlify/nuxt3",
     '@nuxt/content'
   ],
+  publicRuntimeConfig:{
+    base:process.env.NODE_ENV == "production" ? "/CarPlatesWeb/": "/"
+  },
   tailwindcss: {
     cssPath: "/assets/css/tailwind.css",
     configPath: "tailwind.config.js",
