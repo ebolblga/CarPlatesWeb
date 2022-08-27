@@ -74,7 +74,7 @@ let isActive = ref(0);
                 >О проекте</NuxtLink
               >
             </li>
-            <li>
+            <!-- <li>
               <NuxtLink
                 to="/test"
                 title="Страничка для тестирования"
@@ -82,7 +82,7 @@ let isActive = ref(0);
                 :class="{ selected: ($route.name=='test') }"
                 >Тестирование</NuxtLink
               >
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>

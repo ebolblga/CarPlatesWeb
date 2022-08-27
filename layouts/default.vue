@@ -1,11 +1,15 @@
 <script setup lang="ts">
 import Navbar from "~/components/navbar.vue";
+useHead({
+  link:[{
+    rel:"icon",
+    href:"/favicon.ico",
+    type:"image/x-icon"
+  }]
+})
 </script>
 
 <template>
-  <head>
-    <link rel="icon" href="https://ebolblga.github.io/CarPlatesWeb/favicon.ico"/>
-  </head>
   <div class="h-screen">
     <Navbar />
     <slot />
