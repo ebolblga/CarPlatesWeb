@@ -1,6 +1,6 @@
 {
   "node_modules/nuxt/dist/app/entry.mjs": {
-    "file": "nuxt/entry.6173fc55.js",
+    "file": "nuxt/entry.69c5baba.js",
     "src": "node_modules/nuxt/dist/app/entry.mjs",
     "isEntry": true,
     "dynamicImports": [
@@ -36,16 +36,16 @@
       "pages/index.vue",
       "pages/test.vue",
       "node_modules/@nuxt/content/dist/runtime/composables/web-socket.mjs",
-      "virtual:nuxt:C:/WIP Projects/CarPlatesWeb/.nuxt/error-component.mjs",
+      "virtual:nuxt:C:/Users/dell/Desktop/studyProjects/CarPlatesWeb/.nuxt/error-component.mjs",
       "layouts/default.vue"
     ],
     "css": [
-      "nuxt/entry.8ecbee8b.css"
+      "nuxt/entry.b23db60e.css"
     ]
   },
-  "virtual:nuxt:C:/WIP Projects/CarPlatesWeb/.nuxt/error-component.mjs": {
-    "file": "nuxt/error-component.d4737446.js",
-    "src": "virtual:nuxt:C:/WIP Projects/CarPlatesWeb/.nuxt/error-component.mjs",
+  "virtual:nuxt:C:/Users/dell/Desktop/studyProjects/CarPlatesWeb/.nuxt/error-component.mjs": {
+    "file": "nuxt/error-component.2797b2be.js",
+    "src": "virtual:nuxt:C:/Users/dell/Desktop/studyProjects/CarPlatesWeb/.nuxt/error-component.mjs",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs"
@@ -56,7 +56,7 @@
     ]
   },
   "node_modules/@nuxt/content/dist/runtime/components/ContentList.mjs": {
-    "file": "nuxt/ContentList.80784975.js",
+    "file": "nuxt/ContentList.13210aba.js",
     "src": "node_modules/@nuxt/content/dist/runtime/components/ContentList.mjs",
     "isDynamicEntry": true,
     "imports": [
@@ -64,7 +64,7 @@
     ]
   },
   "node_modules/@nuxt/content/dist/runtime/components/ContentNavigation.mjs": {
-    "file": "nuxt/ContentNavigation.9e605722.js",
+    "file": "nuxt/ContentNavigation.3add7de8.js",
     "src": "node_modules/@nuxt/content/dist/runtime/components/ContentNavigation.mjs",
     "isDynamicEntry": true,
     "imports": [
@@ -72,7 +72,7 @@
     ]
   },
   "node_modules/@nuxt/content/dist/runtime/components/Markdown.mjs": {
-    "file": "nuxt/Markdown.133fd3db.js",
+    "file": "nuxt/Markdown.6c94a570.js",
     "src": "node_modules/@nuxt/content/dist/runtime/components/Markdown.mjs",
     "isDynamicEntry": true,
     "imports": [
@@ -80,7 +80,7 @@
     ]
   },
   "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseA.vue": {
-    "file": "nuxt/ProseA.046bbb5f.js",
+    "file": "nuxt/ProseA.570f8800.js",
     "src": "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseA.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -88,7 +88,7 @@
     ]
   },
   "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseBlockquote.vue": {
-    "file": "nuxt/ProseBlockquote.98077f73.js",
+    "file": "nuxt/ProseBlockquote.eec4199b.js",
     "src": "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseBlockquote.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -96,7 +96,7 @@
     ]
   },
   "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseCode.vue": {
-    "file": "nuxt/ProseCode.9d0e9cd6.js",
+    "file": "nuxt/ProseCode.0c57ecb6.js",
     "src": "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseCode.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -107,7 +107,7 @@
     ]
   },
   "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseCodeInline.vue": {
-    "file": "nuxt/ProseCodeInline.3eb706ec.js",
+    "file": "nuxt/ProseCodeInline.37ef6948.js",
     "src": "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseCodeInline.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -115,7 +115,7 @@
     ]
   },
   "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseEm.vue": {
-    "file": "nuxt/ProseEm.9d3fc01a.js",
+    "file": "nuxt/ProseEm.520be398.js",
     "src": "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseEm.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -123,7 +123,7 @@
     ]
   },
   "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseH1.vue": {
-    "file": "nuxt/ProseH1.b10e8b71.js",
+    "file": "nuxt/ProseH1.2135df04.js",
     "src": "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseH1.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -131,7 +131,7 @@
     ]
   },
   "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseH2.vue": {
-    "file": "nuxt/ProseH2.83a69fe4.js",
+    "file": "nuxt/ProseH2.137a0374.js",
     "src": "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseH2.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -139,7 +139,7 @@
     ]
   },
   "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseH3.vue": {
-    "file": "nuxt/ProseH3.8cc639d6.js",
+    "file": "nuxt/ProseH3.ac8e44e1.js",
     "src": "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseH3.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -147,7 +147,7 @@
     ]
   },
   "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseH4.vue": {
-    "file": "nuxt/ProseH4.d89a48fe.js",
+    "file": "nuxt/ProseH4.3b503247.js",
     "src": "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseH4.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -155,7 +155,7 @@
     ]
   },
   "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseH5.vue": {
-    "file": "nuxt/ProseH5.97773a97.js",
+    "file": "nuxt/ProseH5.dc0874d9.js",
     "src": "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseH5.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -163,7 +163,7 @@
     ]
   },
   "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseH6.vue": {
-    "file": "nuxt/ProseH6.201dffae.js",
+    "file": "nuxt/ProseH6.700ace8b.js",
     "src": "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseH6.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -171,7 +171,7 @@
     ]
   },
   "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseHr.vue": {
-    "file": "nuxt/ProseHr.bbb7ffc3.js",
+    "file": "nuxt/ProseHr.5e5ce444.js",
     "src": "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseHr.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -179,7 +179,7 @@
     ]
   },
   "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseImg.vue": {
-    "file": "nuxt/ProseImg.e7ba4af9.js",
+    "file": "nuxt/ProseImg.bb7eaf9f.js",
     "src": "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseImg.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -187,7 +187,7 @@
     ]
   },
   "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseLi.vue": {
-    "file": "nuxt/ProseLi.24ce21d9.js",
+    "file": "nuxt/ProseLi.174c29a3.js",
     "src": "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseLi.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -195,7 +195,7 @@
     ]
   },
   "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseOl.vue": {
-    "file": "nuxt/ProseOl.a8325d89.js",
+    "file": "nuxt/ProseOl.83579101.js",
     "src": "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseOl.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -203,7 +203,7 @@
     ]
   },
   "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseP.vue": {
-    "file": "nuxt/ProseP.5542ec4e.js",
+    "file": "nuxt/ProseP.7eea681b.js",
     "src": "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseP.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -211,7 +211,7 @@
     ]
   },
   "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseStrong.vue": {
-    "file": "nuxt/ProseStrong.68530057.js",
+    "file": "nuxt/ProseStrong.74c18c3d.js",
     "src": "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseStrong.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -219,7 +219,7 @@
     ]
   },
   "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseTable.vue": {
-    "file": "nuxt/ProseTable.35a680a8.js",
+    "file": "nuxt/ProseTable.356716d5.js",
     "src": "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseTable.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -227,7 +227,7 @@
     ]
   },
   "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseTbody.vue": {
-    "file": "nuxt/ProseTbody.73405a43.js",
+    "file": "nuxt/ProseTbody.d1372b77.js",
     "src": "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseTbody.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -235,7 +235,7 @@
     ]
   },
   "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseTd.vue": {
-    "file": "nuxt/ProseTd.825c5374.js",
+    "file": "nuxt/ProseTd.2c0f02de.js",
     "src": "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseTd.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -243,7 +243,7 @@
     ]
   },
   "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseTh.vue": {
-    "file": "nuxt/ProseTh.20209037.js",
+    "file": "nuxt/ProseTh.f59463fd.js",
     "src": "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseTh.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -251,7 +251,7 @@
     ]
   },
   "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseThead.vue": {
-    "file": "nuxt/ProseThead.68698a5f.js",
+    "file": "nuxt/ProseThead.28128e50.js",
     "src": "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseThead.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -259,7 +259,7 @@
     ]
   },
   "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseTr.vue": {
-    "file": "nuxt/ProseTr.0e4eaaac.js",
+    "file": "nuxt/ProseTr.dc58c83d.js",
     "src": "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseTr.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -267,7 +267,7 @@
     ]
   },
   "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseUl.vue": {
-    "file": "nuxt/ProseUl.0baa50e1.js",
+    "file": "nuxt/ProseUl.90b3040f.js",
     "src": "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseUl.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -275,7 +275,7 @@
     ]
   },
   "node_modules/@nuxt/content/dist/runtime/composables/web-socket.mjs": {
-    "file": "nuxt/web-socket.e7f52a83.js",
+    "file": "nuxt/web-socket.2b646eb7.js",
     "src": "node_modules/@nuxt/content/dist/runtime/composables/web-socket.mjs",
     "isDynamicEntry": true,
     "imports": [
@@ -283,7 +283,7 @@
     ]
   },
   "pages/about.vue": {
-    "file": "nuxt/about.2608f9b0.js",
+    "file": "nuxt/about.31f12fe9.js",
     "src": "pages/about.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -291,43 +291,43 @@
     ]
   },
   "pages/db.vue": {
-    "file": "nuxt/db.4b29f2d8.js",
+    "file": "nuxt/db.a25868f3.js",
     "src": "pages/db.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_my-button.b6afd97d.js",
+      "_my-button.cb54cb4a.js",
       "node_modules/nuxt/dist/app/entry.mjs"
     ]
   },
-  "_my-button.b6afd97d.js": {
-    "file": "nuxt/my-button.b6afd97d.js",
+  "_my-button.cb54cb4a.js": {
+    "file": "nuxt/my-button.cb54cb4a.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs"
     ]
   },
   "pages/index.vue": {
-    "file": "nuxt/index.ea1c4cd9.js",
+    "file": "nuxt/index.84419483.js",
     "src": "pages/index.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_my-button.b6afd97d.js",
+      "_my-button.cb54cb4a.js",
       "node_modules/nuxt/dist/app/entry.mjs"
     ],
     "css": [
-      "nuxt/index.920e4228.css"
+      "nuxt/index.40fd21a7.css"
     ]
   },
   "pages/test.vue": {
-    "file": "nuxt/test.4568fca6.js",
+    "file": "nuxt/test.e045dc8f.js",
     "src": "pages/test.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_my-button.b6afd97d.js",
+      "_my-button.cb54cb4a.js",
       "node_modules/nuxt/dist/app/entry.mjs"
     ]
   },
   "layouts/default.vue": {
-    "file": "nuxt/default.9f9b15e7.js",
+    "file": "nuxt/default.fb4fe9b5.js",
     "src": "layouts/default.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -338,7 +338,7 @@
     ]
   },
   "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue": {
-    "file": "nuxt/error-404.f7eff8dd.js",
+    "file": "nuxt/error-404.e6f86fb6.js",
     "src": "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -349,7 +349,7 @@
     ]
   },
   "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue": {
-    "file": "nuxt/error-500.6ead8fdd.js",
+    "file": "nuxt/error-500.99a4a4f0.js",
     "src": "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -359,13 +359,9 @@
       "nuxt/error-500.08851880.css"
     ]
   },
-  "pages/index.css": {
-    "file": "nuxt/index.920e4228.css",
-    "src": "pages/index.css"
-  },
-  "layouts/default.css": {
-    "file": "nuxt/default.869a786b.css",
-    "src": "layouts/default.css"
+  "node_modules/nuxt/dist/app/entry.css": {
+    "file": "nuxt/entry.b23db60e.css",
+    "src": "node_modules/nuxt/dist/app/entry.css"
   },
   "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseCode.css": {
     "file": "nuxt/ProseCode.e63e49c6.css",
@@ -375,12 +371,16 @@
     "file": "nuxt/error-404.7729cee9.css",
     "src": "node_modules/@nuxt/ui-templates/dist/templates/error-404.css"
   },
-  "node_modules/nuxt/dist/app/entry.css": {
-    "file": "nuxt/entry.8ecbee8b.css",
-    "src": "node_modules/nuxt/dist/app/entry.css"
+  "pages/index.css": {
+    "file": "nuxt/index.40fd21a7.css",
+    "src": "pages/index.css"
   },
   "node_modules/@nuxt/ui-templates/dist/templates/error-500.css": {
     "file": "nuxt/error-500.08851880.css",
     "src": "node_modules/@nuxt/ui-templates/dist/templates/error-500.css"
+  },
+  "layouts/default.css": {
+    "file": "nuxt/default.869a786b.css",
+    "src": "layouts/default.css"
   }
 }
