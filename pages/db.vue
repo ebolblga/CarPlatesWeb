@@ -1,5 +1,6 @@
 <script setup lang="ts">
 useHead({ title: "База данных" });
+let popupShown = ref(false);
 const files = {
   "russianUTF-8.txt": "Все русские слова",
   "swears.txt": "Бранные слова",
@@ -33,6 +34,23 @@ async function Download() {
     </select>
     <br />
     <my-button @click="Load">Загрузить</my-button>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100" rel="stylesheet" />
+    <span class="material-symbols-outlined icon w-0" @click="popupShown=!popupShown">help</span>
+    
+    <div class="inline-block absolute z-10 w-86 ml-8 mt-[-40px] text-sm font-light rounded-lg border shadow-sm text-gray-400 border-gray-600 bg-gray-800" :class="{'hidden': !popupShown}">
+    <div class="py-2 px-3 rounded-t-lg border-b border-gray-600 bg-gray-700">
+        <h3 class="font-semibold text-white">Источники данных</h3>
+    </div>
+    <div class="py-2 px-3">
+        <a href="https://github.com/danakt/russian-words" target="_blank" class="underline">Все русские слова из репозитория danakt</a>
+        <br />
+        <a href="https://2yxa.ru/mat/" target="_blank" class="underline">Бранные слова запарсены с сайта 2yxa.ru</a>
+        <br />
+        <a href="https://github.com/ahibis/hahaRU/blob/master/hahaRU/WordGeneration.cs" target="_blank" class="underline">Смешные слова из старого проекта</a>
+    </div>
+     <div data-popper-arrow></div>
+    </div>
+    <br />
     <my-button @click="Download">Скачать</my-button>
     <br />
     <span v-if="!words.length" class="text-green-300 pt-5"> Не загружено </span>
