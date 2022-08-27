@@ -18,9 +18,16 @@ const types = {
 let canvas,ctx,img;
 
 onMounted(async ()=>{
-  var myFont = new FontFace('RoadNumbers', 'url(/RoadNumbers2.0.ttf)');
-  const font = await myFont.load()
-  document.fonts.add(font)
+
+  try{
+    const myFont = new FontFace('RoadNumbers', 'url(/RoadNumbers2.0.ttf)');
+    const font = await myFont.load()
+    document.fonts.add(font)
+  }catch(e){
+    const myFont = new FontFace('RoadNumbers', 'url(/CarPlatesWeb/RoadNumbers2.0.ttf)');
+    const font = await myFont.load()
+    document.fonts.add(font)
+  }
   canvas = document.createElement("canvas")
   Object.assign(canvas,{width:156,height:36})
   ctx = canvas.getContext("2d");
