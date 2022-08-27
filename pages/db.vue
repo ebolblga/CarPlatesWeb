@@ -14,6 +14,13 @@ async function Load() {
     .split("\n")
     .map((word) => (word.at(-1) == "\r" ? word.slice(0, -1) : word));
 }
+
+async function Download() {
+  const a = document.createElement("a");
+  a.download = file.value;
+  a.href = "/Library/" + file.value;
+  a.click();
+}
 </script>
 
 <template>
@@ -26,10 +33,14 @@ async function Load() {
     </select>
     <br />
     <my-button @click="Load">Загрузить</my-button>
+    <my-button @click="Download">Скачать</my-button>
     <br />
     <span v-if="!words.length" class="text-green-300 pt-5"> Не загружено </span>
-    <span v-else class="text-gray-600 text-xl">
+    <div v-else class="text-gray-600 text-xl">
       Всего записей: {{ words.length }}
-    </span>
+      <p class="pt-[2vh] p-[10vw]">
+        {{ words }}
+      </p>
+    </div>
   </div>
 </template>
