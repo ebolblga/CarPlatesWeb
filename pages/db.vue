@@ -43,6 +43,7 @@ async function Download() {
   <div class="content-center text-center pt-[5vh]">
     <select v-model="file" @change="Load"
       class="min-w-[220px] h-[40px] mb-5 text-center focus:outline-none rounded-lg border focus:z-10 focus:ring-4 focus:ring-gray-700 bg-gray-800 text-gray-400 border-gray-600 hover:text-white hover:bg-gray-700">
+      <option value="" disabled>Выберете базу данных</option>
       <option v-for="(file, i) in files" :value="i">{{ file }}</option>
     </select>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100" rel="stylesheet"/>
