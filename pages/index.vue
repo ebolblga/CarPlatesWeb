@@ -103,12 +103,12 @@ let popupShown = ref(false);
   <div class="content-center text-center pt-[5vh]">
     <select v-model="file"
       class="min-w-[220px] h-[40px] mb-5 text-center focus:outline-none rounded-lg border focus:z-10 focus:ring-4 focus:ring-gray-700 bg-gray-800 text-gray-400 border-gray-600 hover:text-white hover:bg-gray-700">
-      <option :value="null" disabled>None</option>
+      <option value="" disabled>Выберете базу данных</option>
       <option v-for="(file, i) in files" :value="i">{{ file }}</option>
     </select><br />
     <select :value="type" v-model="type"
       class="min-w-[220px] h-[40px] mb-5 text-center focus:outline-none rounded-lg border focus:z-10 focus:ring-4 focus:ring-gray-700 bg-gray-800 text-gray-400 border-gray-600 hover:text-white hover:bg-gray-700">
-      <option :value="null" disabled>None</option>
+      <option value="" disabled>Выберете метод совпадения</option>
       <option v-for="(type, i) in types" :value="i" >{{ type }}</option>
     </select>
     <br />
