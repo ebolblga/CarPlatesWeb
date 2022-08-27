@@ -47,8 +47,8 @@ async function Download() {
     </select>
     <br />
     <my-button @click="Load">Загрузить</my-button>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100" rel="stylesheet" />
-    <span class="material-symbols-outlined icon w-0" @click="popupShown=!popupShown">help</span>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100" rel="stylesheet"/>
+    <span class="material-symbols-outlined icon w-0 cursor-help select-none" @click="popupShown=!popupShown">help</span>
     
     <div class="inline-block absolute z-10 w-86 ml-8 mt-[-40px] text-sm font-light rounded-lg border shadow-sm text-gray-400 border-gray-600 bg-gray-800" :class="{'hidden': !popupShown}">
     <div class="py-2 px-3 rounded-t-lg border-b border-gray-600 bg-gray-700">
@@ -68,8 +68,8 @@ async function Download() {
     <br />
     <span v-if="!words.length" class="text-green-300 pt-5"> Не загружено </span>
     <span v-else class="text-gray-600 text-xl">
-      Всего записей: {{ words.length }} ({{currentPage}}/{{pageCount}})
-      <div v-for="i in currentPageSize">{{ words[currentPage * pageSize + i] }}</div>
+      <p>Всего записей: {{ words.length }}</p>
+      <div v-for="i in currentPageSize">{{ words[(currentPage-1) * pageSize + i] }}</div>
       <div class="flex justify-center" >
         <div :class="{
           flex: 1,
@@ -77,12 +77,13 @@ async function Download() {
           'w-[300px]': 1,
           'justify-center': !(isFirstPage && isLastPage)
         }">
-          <my-button @click="prev" v-if="!isFirstPage">предыдущая</my-button>
-          <my-button @click="next" v-if="!isLastPage">следующая</my-button>
+        <div class="pt-10 content-center text-center">
+          <p class="text-base">({{currentPage}} / {{pageCount}})</p>
+          <span class="material-symbols-outlined icon cursor-pointer select-none" @click="prev" v-if="!isFirstPage">arrow_back</span>
+          <span class="material-symbols-outlined icon cursor-pointer select-none" @click="next" v-if="!isLastPage">arrow_forward</span>
+        </div> 
         </div>
       </div>
     </span>
-
-
   </div>
 </template>

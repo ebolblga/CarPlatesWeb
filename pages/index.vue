@@ -114,7 +114,7 @@ let popupShown = ref(false);
     <br />
     <my-button @click="Search" :class="{ 'border-red-500 focus:ring-red-400 shake': request.error }">Поиск</my-button>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100" rel="stylesheet" />
-    <span class="material-symbols-outlined icon w-0" @click="popupShown=!popupShown">help</span>
+    <span class="material-symbols-outlined icon w-0 cursor-help select-none" @click="popupShown=!popupShown">help</span>
     
     <div class="inline-block absolute z-10 w-64 ml-8 mt-[-40px] text-sm font-light rounded-lg border shadow-sm text-gray-400 border-gray-600 bg-gray-800" :class="{'hidden': !popupShown}">
     <div class="py-2 px-3 rounded-t-lg border-b border-gray-600 bg-gray-700">
