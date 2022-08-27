@@ -113,6 +113,7 @@ let popupShown = ref(false);
     </select>
     <br />
     <my-button @click="Search" :class="{ 'border-red-500 focus:ring-red-400 shake': request.error }">Поиск</my-button>
+    
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100" rel="stylesheet" />
     <span class="material-symbols-outlined icon w-0 cursor-help select-none" @click="popupShown=!popupShown">help</span>
     
