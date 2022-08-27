@@ -1,8 +1,9 @@
 <script setup lang="ts">
 useHead({ title: "Тестирование" });
-
 const src = ref("");
 async function draw() {
+  
+
   var myFont = new FontFace("RoadNumbers", "url(/RoadNumbers2.0.ttf)");
   const font = await myFont.load();
   document.fonts.add(font);
